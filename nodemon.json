@@ -1,0 +1,13 @@
+{
+    "ignore": ["tsconfig.json", "build/*"],
+    "delay": 500,
+    "watch": [
+        ".env",
+        "./src/kafkaBroker",
+        "./src/workers",
+        "./src/config",
+        "package.json"
+    ],
+    "ext": "ts,js,json,avsc,avdl",
+    "verbose": true
+}
