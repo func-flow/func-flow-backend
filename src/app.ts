@@ -12,9 +12,8 @@ import router from "./config/routes";
 import {
   ErrorWithHttpCode,
   sendErrorResponse,
-  UserError, 
+  UserError,
 } from "./config/errors";
-
 
 const app = express();
 
