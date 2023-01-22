@@ -72,11 +72,8 @@
       "cors": "^2.8.5",
       "date-fns": "^2.29.3",
       "dotenv": "^16.0.3",
-<<<<<<< HEAD
       "dotenv-expand": "^10.0.0",
       "event-dispatch": "^0.4.1",
-=======
->>>>>>> 74cb90e (ADDED JSON)
       "express": "^4.18.2",
       "fast-glob": "^3.2.12",
       "fast-isnumeric": "^1.1.4",
@@ -88,7 +85,6 @@
       "jest-mock-kafkajs": "github:Wei-Zou/jest-mock-kafkajs",
       "joi": "^17.6.2",
       "jsonwebtoken": "^8.5.1",
-<<<<<<< HEAD
       "lodash": "^4.17.21",
       "lodash-es": "^4.17.21",
       "mathjs": "^11.5.0",
@@ -96,20 +92,11 @@
       "morgan": "^1.10.0",
       "multer": "^1.4.5-lts.1",
       "node-geocoder": "^4.2.0",
-=======
-      "moment": "^2.29.4",
-      "morgan": "^1.10.0",
-      "multer": "^1.4.5-lts.1",
->>>>>>> 74cb90e (ADDED JSON)
       "passport": "^0.6.0",
       "passport-jwt": "^4.0.1",
       "redis-mock": "^0.56.3",
       "reflect-metadata": "^0.1.13",
       "rimraf": "^3.0.2"
-<<<<<<< HEAD
-=======
-
->>>>>>> 74cb90e (ADDED JSON)
     },
     "scripts": {
       "dev": "nodemon --exec \"tsc-watch --noClear --onSuccess \\\"npm-run-all -s start\\\"\"",
@@ -122,22 +109,8 @@
       "build": "npm-run-all -s prepare:production build:production copy:build:files",
       "build-cli": "npm run build && npm i -g",
       "test": "echo '⚠️ please implement tests'",
-<<<<<<< HEAD
-      "migrate": "npx sequelize-cli db:migrate --debug",
-      "migrate:status": "npx sequelize-cli db:migrate:status --debug",
-      "migrate:undo": "npx sequelize-cli db:migrate:undo --debug",
-      "migrate:undo:all": "npx sequelize-cli db:migrate:undo:all --debug",
-      "migrate:fresh": "npx sequelize-cli db:drop --debug && npx sequelize-cli db:create --debug && npm run migrate",
-      "seed": "npx sequelize-cli db:seed --debug",
-      "seed:undo": "npx sequelize-cli db:seed:undo --debug",
-      "seed:all": "npx sequelize-cli db:seed:all --debug",
-      "seed:undo:all": "npx sequelize-cli db:seed:undo:all --debug",
-      "migrate:fresh:seed": "npm run migrate:fresh && npm run seed:all",
       "package": "pkg . --targets node14-macos-x64 --output hello"
 
-=======
-      "package": "pkg . --targets node14-macos-x64 --output hello"
->>>>>>> 74cb90e (ADDED JSON)
     }
   }
   
