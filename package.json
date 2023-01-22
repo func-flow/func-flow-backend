@@ -4,7 +4,7 @@
     "version": "0.0.1",
     "description": "Backend for Func Fun Backend",
     "main": "src/app.ts",
-    "author": "Exeque",
+    "author": "Func Backend",
     "license": "MIT",
     "private": true,
     "imports": {
@@ -16,7 +16,6 @@
       "@types/express": "^4.17.14",
       "@types/fast-isnumeric": "^1.1.0",
       "@types/find-root": "^1.1.2",
-      "@types/html-pdf": "^3.0.0",
       "@types/i18n": "^0.13.4",
       "@types/jest": "^29.1.2",
       "@types/jsonwebtoken": "^8.5.9",
@@ -29,12 +28,10 @@
       "@types/nodemon": "^1.19.2",
       "@types/passport": "^1.0.11",
       "@types/passport-jwt": "^3.0.7",
-      "@types/pg": "^8.6.5",
       "@types/prettier": "^2.7.1",
       "@types/supertest": "^2.0.12",
       "@types/tsc-watch": "^4.2.0",
       "@types/until-promise": "^0.3.1",
-      "@types/uuid": "^8.3.4",
       "@typescript-eslint/eslint-plugin": "^5.39.0",
       "@typescript-eslint/parser": "^5.39.0",
       "eslint": "^8.24.0",
@@ -91,20 +88,11 @@
       "morgan": "^1.10.0",
       "multer": "^1.4.5-lts.1",
       "node-geocoder": "^4.2.0",
-      "nodemailer": "^6.8.0",
       "passport": "^0.6.0",
       "passport-jwt": "^4.0.1",
-      "pg": "^8.8.0",
       "redis-mock": "^0.56.3",
       "reflect-metadata": "^0.1.13",
-      "rimraf": "^3.0.2",
-      "sequelize": "^6.28.0",
-      "sequelize-typescript": "^2.1.5",
-      "supertest": "^6.3.3",
-      "ts-jest": "^29.0.3",
-      "typedi": "^0.10.0",
-      "until-promise": "^0.3.0",
-      "uuid": "^9.0.0"
+      "rimraf": "^3.0.2"
     },
     "scripts": {
       "dev": "nodemon --exec \"tsc-watch --noClear --onSuccess \\\"npm-run-all -s start\\\"\"",
@@ -127,19 +115,8 @@
       "seed:all": "npx sequelize-cli db:seed:all --debug",
       "seed:undo:all": "npx sequelize-cli db:seed:undo:all --debug",
       "migrate:fresh:seed": "npm run migrate:fresh && npm run seed:all",
-      "db:init": "npx sequelize-cli init --debug",
-      "db:init:config": "npx sequelize-cli init:config --debug",
-      "db:init:migrations": "npx sequelize-cli init:migrations --debug",
-      "db:init:models": "npx sequelize-cli init:models --debug",
-      "db:init:seeders": "npx sequelize-cli init:seeders --debug",
-      "db:new:migration": "npx sequelize-cli migration:generate --debug",
-      "db:new:model": "npx sequelize-cli model:generate --debug",
-      "db:new:seed": "npx sequelize-cli seed:generate --debug",
-      "package": "pkg . --targets node14-macos-x64 --output hello",
-      "start:kafka:consumers:dev": "npm run build && nodemon -x node --no-warnings --es-module-specifier-resolution=node --loader ts-node/esm src/kafkaBroker/consumerEntry.ts",
-      "start:kafka:consumers:prod": "node --es-module-specifier-resolution=node build/src/kafkaBroker/consumerEntry.js",
-      "start:bull:worker:dev": "npm run build && nodemon -x node --no-warnings --es-module-specifier-resolution=node --loader ts-node/esm src/workers/queue-processors.ts",
-      "start:bull:worker:prod": "node --max-old-space-size=3072 --es-module-specifier-resolution=node build/src/workers/queue-processors.js"
+      "package": "pkg . --targets node14-macos-x64 --output hello"
+
     }
   }
   
