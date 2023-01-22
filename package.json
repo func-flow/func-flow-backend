@@ -32,10 +32,6 @@
       "@types/supertest": "^2.0.12",
       "@types/tsc-watch": "^4.2.0",
       "@types/until-promise": "^0.3.1",
-<<<<<<< HEAD
-=======
-      "@types/uuid": "^8.3.4",
->>>>>>> 74cb90e (ADDED JSON)
       "@typescript-eslint/eslint-plugin": "^5.39.0",
       "@typescript-eslint/parser": "^5.39.0",
       "eslint": "^8.24.0",
@@ -82,7 +78,6 @@
       "helmet": "^6.0.1",
       "i18n": "^0.15.1",
       "jest": "^29.3.1",
-      "jest-mock-kafkajs": "github:Wei-Zou/jest-mock-kafkajs",
       "joi": "^17.6.2",
       "jsonwebtoken": "^8.5.1",
       "lodash": "^4.17.21",
