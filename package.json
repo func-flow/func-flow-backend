@@ -1,10 +1,10 @@
 {
-    "name": "func-flow-backend",
+    "name": "funcbackend",
     "type": "module",
     "version": "0.0.1",
     "description": "Backend for Func Fun Backend",
-    "main": "src/app.ts",
-    "author": "func-backend",
+    "main": "src/app.ts"
+    "author": "Func Backend",
     "license": "MIT",
     "private": true,
     "imports": {
@@ -91,6 +91,9 @@
       "multer": "^1.4.5-lts.1",
       "node-geocoder": "^4.2.0",
       "nodemailer": "^6.8.0",
+      "moment": "^2.29.4",
+      "morgan": "^1.10.0",
+      "multer": "^1.4.5-lts.1",
       "passport": "^0.6.0",
       "passport-jwt": "^4.0.1",
       "redis-mock": "^0.56.3",
@@ -98,6 +101,7 @@
       "rimraf": "^3.0.2",
       "supertest": "^6.3.3",
       "ts-jest": "^29.0.3"
+      "rimraf": "^3.0.2"
     },
     "scripts": {
       "dev": "nodemon --exec \"tsc-watch --noClear --onSuccess \\\"npm-run-all -s start\\\"\"",
@@ -111,7 +115,6 @@
       "build-cli": "npm run build && npm i -g",
       "test": "echo '⚠️ please implement tests'",
       "package": "pkg . --targets node14-macos-x64 --output hello"
-
     }
   }
   
