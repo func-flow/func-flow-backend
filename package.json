@@ -2,7 +2,7 @@
     "name": "funcbackend",
     "type": "module",
     "version": "0.0.1",
-    "description": "Backend for Func Fun Backend",
+    "description": "Backend for Func Fun",
     "main": "src/app.ts"
     "author": "Func Backend",
     "license": "MIT",
