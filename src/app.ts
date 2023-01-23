@@ -3,7 +3,7 @@
 import * as projectConst from "./config/constants";
 import http from "http";
 import express, { Request, Response, NextFunction } from "express";
-import { get, isString } from "lodash-es";
+import { get } from "lodash-es";
 import middlewares from "./config/middlewares";
 import router from "./config/routes";
 import { sendErrorResponse, UserError } from "./config/errors";
@@ -23,13 +23,13 @@ app.use(router);
 // alive check
 app.get("/", (_, res) => res.send("Server Online"));
 
-//app.get("/log-updates", (_, res) => res.json(updatesData));
+// app.get("/log-updates", (_, res) => res.json(updatesData));
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   sendErrorResponse(res, err as UserError);
 });
 
-//await getClient();
+// await getClient();
 
 server.listen(
   projectConst.NODE_ENV === "test" ? 0 : projectConst.PORT,
