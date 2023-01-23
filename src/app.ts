@@ -3,14 +3,10 @@
 import * as projectConst from "./config/constants";
 import http from "http";
 import express, { Request, Response, NextFunction } from "express";
-import multer from "multer";
-import * as Sentry from "@sentry/node";
 import { get, isString } from "lodash-es";
 import middlewares from "./config/middlewares";
 import router from "./config/routes";
-//import passportConfig from "./config/passport";
 import {
-  ErrorWithHttpCode,
   sendErrorResponse,
   UserError,
 } from "./config/errors";
@@ -19,40 +15,12 @@ const app = express();
 
 const server = http.createServer(app);
 
-//passportConfig();
-
 app.set("trust proxy", true);
 
-/*
-
-if (projectConst.NODE_ENV !== "development") {
-  Sentry.init({
-    dsn: projectConst.SENTRY_DSN,
-    environment: projectConst.SENTRY_ENV,
-  });
-
-  //Attach sentry error handler
-  app.use(
-    Sentry.Handlers.errorHandler({
-      shouldHandleError(error) {
-        const errorCode = (error as unknown as ErrorWithHttpCode).code;
-        // Capture only 5xx errors
-        if (errorCode >= 500) {
-          return true;
-        }
-
-        return false;
-      },
-    })
-  );
-}
-*/
 // register middlewares
 app.use(middlewares);
 
 // register routes
-//app.post("/upload", upload.single("file"), uploadHandler);
-
 app.use(router);
 
 // alive check
