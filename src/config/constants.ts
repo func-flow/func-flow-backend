@@ -2,7 +2,6 @@ import path, { join } from "path";
 import dotenv from "dotenv";
 import findRoot from "find-root";
 
-
 export type ProcessEnv = {
   NODE_ENV: "development" | "production" | "test";
   SECRET: string;
