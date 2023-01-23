@@ -6,10 +6,7 @@ import express, { Request, Response, NextFunction } from "express";
 import { get, isString } from "lodash-es";
 import middlewares from "./config/middlewares";
 import router from "./config/routes";
-import {
-  sendErrorResponse,
-  UserError,
-} from "./config/errors";
+import { sendErrorResponse, UserError } from "./config/errors";
 
 const app = express();
 

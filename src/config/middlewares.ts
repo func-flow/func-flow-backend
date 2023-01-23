@@ -12,7 +12,7 @@ const middlewares = [
   helmet(),
   morgan(
     ":method :url :status :response-time ms - :res[content-length] :body - :req[content-length]"
-  )
+  ),
 ];
 
 export default middlewares;
