@@ -34,7 +34,7 @@ export const PORT = parseInt(String(processEnvObj.PORT), 10);
 export const APP_URL = processEnvObj.APP_URL;
 
 // This must match the name in package.json
-export const PROJECT_NAME = processEnvObj.PROJECT_NAME || "funcbackend";
+export const PROJECT_NAME = processEnvObj.PROJECT_NAME || "func-flow backend";
 
 export const rootProjectDir = (): string => {
   try {

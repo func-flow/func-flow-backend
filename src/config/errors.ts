@@ -1,9 +1,5 @@
 /* eslint-disable max-classes-per-file */
 import { Response } from "express";
-import * as Sentry from "@sentry/node";
-import { NODE_ENV } from "./constants";
-
-// import { ValidationError as JoiValidationError } from "@hapi/joi";
 
 export interface ErrorWithHttpCode {
   message: string;
@@ -12,7 +8,6 @@ export interface ErrorWithHttpCode {
 
 export class UserError extends Error implements ErrorWithHttpCode {
   message: string;
-
   code: number;
 
   constructor(message: string, code: number) {
@@ -58,18 +53,6 @@ export class ActionNotAllow extends UserError {
   }
 }
 
-export class InvalidPasswordResetToken extends UserError {
-  constructor() {
-    super(`reset token is invalid`, 400);
-  }
-}
-
-export class ResetLinkExpired extends UserError {
-  constructor() {
-    super(`link expired`, 400);
-  }
-}
-
 export class ResourceRequired extends UserError {
   constructor(resource: string) {
     super(`${resource} is required`, 400);
@@ -79,9 +62,8 @@ export class ResourceRequired extends UserError {
 export function handleError(error: unknown): Error {
   console.debug(error);
 
-  if (NODE_ENV !== "development") {
-    Sentry.captureException(error);
-  }
+  // HANDLE SENTRY REPORTING
+
   if (error instanceof UserError) return error;
   return new SystemError();
 }
